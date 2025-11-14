@@ -136,14 +136,7 @@ POST /predict
 - 🧊 Glassmorphism design  
 - 📱 Fully responsive layout  
 
-## 📸 Screenshots
 
-```
-/screenshots/
-    dark.png
-    light.png
-    prediction.png
-```
 
 ## ✨ Future Improvements
 
