@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Salary Predictor — Rik</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+  <meta name="theme-color" content="#0b1220">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+
+      <!-- Header -->
+      <header class="card-header">
+        <div class="brand">
+          <div class="logo">💼</div>
+          <div>
+            <h1>Salary Predictor</h1>
+            <p class="muted">Estimate salaries using our trained ML model</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="themeToggle" class="btn-icon" aria-label="Toggle theme">🌙</button>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="card-body">
+        <form id="predictForm" class="form">
+
+          <div class="row">
+            <div class="field">
+              <label for="age">Age</label>
+              <input id="age" name="age" type="number" min="21" max="100" placeholder="e.g., 30" required />
+              <small class="muted">Age must be greater than 20</small>
+            </div>
+
+            <div class="field">
+              <label for="experience">Years of Experience</label>
+              <input id="experience" name="experience" type="number" min="0" max="60" placeholder="e.g., 5" required />
+              <small class="muted">Rule: Age − Experience must be &gt; 20</small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="education">Education Level</label>
+              <select id="education" name="education" required>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+                <option value="High School">High School</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="job_title">Job Title</label>
+            <input id="job_title" name="job_title" type="text" placeholder="e.g., Software Engineer" required />
+            <small class="muted">Use exact job titles from your dataset for best accuracy</small>
+          </div>
+
+          <div class="actions">
+            <button id="submitBtn" class="btn primary" type="submit">Predict Salary</button>
+            <button id="sampleBtn" class="btn ghost" type="button">Fill Sample</button>
+          </div>
+
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="result hidden">
+          <div class="result-card">
+            <div class="result-left">
+              <div class="rocket">🚀</div>
+              <div>
+                <h3 id="salaryText">—</h3>
+                <p class="muted" id="salaryBreakdown">Input processed</p>
+              </div>
+            </div>
+            <div class="result-right">
+              <span class="chip">Model</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js" defer></script>
+</body>
+</html>

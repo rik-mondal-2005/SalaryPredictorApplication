@@ -1,0 +1,310 @@
+/* ------------------------------------------------------------- */
+/* PREMIUM GRADIENT THEME — AMBER → ORANGE → ROSE                */
+/* ------------------------------------------------------------- */
+:root {
+  --bg: linear-gradient(180deg, #0d0f14, #111827 60%);
+  --card-bg: rgba(255,255,255,0.03);
+  --text: #f8fafc;
+  --muted: #9ca3af;
+
+  --accent-grad: linear-gradient(135deg, #fbbf24, #fb923c, #fb7185);
+  --accent-shadow: 0px 8px 20px rgba(251,113,133,0.3);
+
+  --input-bg: rgba(255,255,255,0.06);
+  --input-border: rgba(255,255,255,0.12);
+
+  --chip-bg: rgba(255,255,255,0.08);
+
+  --danger: #fb7185;
+
+  --transition: 300ms ease;
+}
+
+/* ------------------------------------------------------------- */
+/* RESET + BASE                                                  */
+/* ------------------------------------------------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  transition: var(--transition);
+}
+
+/* ------------------------------------------------------------- */
+/* CARD                                                          */
+/* ------------------------------------------------------------- */
+.app { width: 100%; max-width: 900px; }
+
+.card {
+  backdrop-filter: blur(18px);
+  background: var(--card-bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0px 14px 40px rgba(0,0,0,0.4);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 22px 50px rgba(0,0,0,0.5);
+}
+
+/* ------------------------------------------------------------- */
+/* HEADER                                                        */
+/* ------------------------------------------------------------- */
+.card-header {
+  padding: 22px 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--accent-grad);
+  box-shadow: var(--accent-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.card-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------- */
+/* THEME BUTTON                                                  */
+/* ------------------------------------------------------------- */
+.controls { display: flex; gap: 14px; }
+
+.btn-icon {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.btn-icon:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ------------------------------------------------------------- */
+/* FORM                                                          */
+/* ------------------------------------------------------------- */
+.card-body { padding: 24px 28px; }
+
+.form { display: flex; flex-direction: column; gap: 20px; }
+
+.row { display: flex; gap: 20px; }
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Inputs */
+.field input,
+.field select {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #fb923c;
+  box-shadow: 0px 0px 0px 3px rgba(251,146,60,0.35);
+}
+
+/* helper text */
+.field small {
+  margin-top: -2px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------- */
+/* BUTTONS                                                       */
+/* ------------------------------------------------------------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.btn.primary {
+  background: var(--accent-grad);
+  color: #fff;
+  box-shadow: var(--accent-shadow);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 14px 30px rgba(251,146,60,0.45);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--text);
+}
+
+.btn.ghost:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* ------------------------------------------------------------- */
+/* RESULT BOX                                                    */
+/* ------------------------------------------------------------- */
+.result { margin-top: 18px; }
+
+.result-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  animation: fadeUp 0.35s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rocket { font-size: 36px; }
+
+.chip {
+  padding: 6px 12px;
+  background: var(--chip-bg);
+  border-radius: 50px;
+  font-size: 13px;
+}
+
+/* ------------------------------------------------------------- */
+/* ERROR BOX                                                     */
+/* ------------------------------------------------------------- */
+.error {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--danger);
+  background: rgba(251,113,133,0.08);
+  border: 1px solid rgba(251,113,133,0.25);
+}
+
+/* ------------------------------------------------------------- */
+/* FOOTER (Removed from your HTML but kept safe if needed later) */
+/* ------------------------------------------------------------- */
+.card-footer {
+  padding: 14px 28px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-footer p { font-size: 13px; color: var(--muted); }
+
+/* ------------------------------------------------------------- */
+.hidden { display: none !important; }
+
+/* ------------------------------------------------------------- */
+/* RESPONSIVE                                                    */
+/* ------------------------------------------------------------- */
+@media (max-width: 720px) {
+  .row { flex-direction: column; }
+}
+
+/* ------------------------------------------------------------- */
+/* LIGHT THEME                                                   */
+/* ------------------------------------------------------------- */
+.light {
+  --bg: linear-gradient(180deg, #fff6e9, #ffecef);
+  --text: #1f2937;
+  --muted: #616b76;
+
+  --card-bg: rgba(255,255,255,0.7);
+  --input-bg: rgba(255,255,255,0.9);
+  --input-border: rgba(0,0,0,0.22);
+
+  --chip-bg: rgba(0,0,0,0.06);
+}
+
+.light body {
+  background: var(--bg);
+}
+
+.light .card {
+  background: var(--card-bg);
+  box-shadow: 0px 10px 34px rgba(0,0,0,0.15);
+}
+
+.light input,
+.light select {
+  background: rgba(255,255,255,0.95) !important;
+  color: #1f2937 !important;
+  border-color: rgba(0,0,0,0.22) !important;
+}
+
+.light option {
+  background: white !important;
+  color: #1f2937 !important;
+}
+
+.light .btn-icon:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+.light .result-card {
+  background: rgba(255,255,255,0.9);
+}

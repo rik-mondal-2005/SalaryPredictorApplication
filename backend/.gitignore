@@ -1,0 +1,51 @@
+# --- Python cache files ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environment ---
+venv/
+.env/
+ENV/
+env/
+.venv/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Model Files ---
+models/*.pkl
+models/*.joblib
+
+# --- Data Files ---
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# --- Build / Distribution ---
+build/
+dist/
+*.egg-info/
+
+# --- Jupyter Notebooks Checkpoints ---
+.ipynb_checkpoints/
+
+# --- Temporary Files ---
+*.tmp
+*.temp
+*.bak
+
+# --- Environment / Config Files ---
+*.env
+.env.local
